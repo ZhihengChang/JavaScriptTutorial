@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>This html page is used to show interactions in Javascript</p>
+    </body>
+</html>
+
+<script>
+    
+    //shows a message and wait for clicking 'OK'
+    alert("hello");
+
+    //shows a message and wait for input and store the input
+    //the second argument is the default string in the input box, it is optional
+    let name = prompt("Enter your name:", "put your name here");
+    alert(`hello ${name}`);
+
+    //confirm shows a modal window with 'OK' and 'Cancel'
+    let agreeOrNotAgree = confirm("Do you agree the terms?");
+    alert(agreeOrNotAgree);
+
+</script>
