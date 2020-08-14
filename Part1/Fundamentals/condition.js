@@ -40,3 +40,9 @@ let person = (age < 10) ? "child" :
     (age <= 30) ? "young man" :
     "man";
 console.log(person);
+
+//check for valid value in x
+let x = null;
+let hasValue = (isNaN(x) | typeof x == 'undefined'| !x)? false : true;
+console.log(hasValue);
+
