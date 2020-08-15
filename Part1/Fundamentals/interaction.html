@@ -7,16 +7,29 @@
 
 <script>
     
-    //shows a message and wait for clicking 'OK'
-    alert("hello");
+    // //shows a message and wait for clicking 'OK'
+    // alert("hello");
 
-    //shows a message and wait for input and store the input
-    //the second argument is the default string in the input box, it is optional
-    let name = prompt("Enter your name:", "put your name here");
-    alert(`hello ${name}`);
+    // //shows a message and wait for input and store the input
+    // //the second argument is the default string in the input box, it is optional
+    // let name = prompt("Enter your name:", "put your name here");
+    // alert(`hello ${name}`);
 
-    //confirm shows a modal window with 'OK' and 'Cancel'
-    let agreeOrNotAgree = confirm("Do you agree the terms?");
-    alert(agreeOrNotAgree);
+    // //confirm shows a modal window with 'OK' and 'Cancel'
+    // let agreeOrNotAgree = confirm("Do you agree the terms?");
+    // alert(agreeOrNotAgree);
+
+    let username = prompt("Enter Username: ");
+    alert(
+        (!username || username == 'ESC')? "Canceled":
+        (username != 'Admin')? username + " not exist!":
+        "Continue to enter password"
+    );
+    let password = prompt("Enter " + username + " password: ");
+    alert(
+        (!password)? "Canceled":
+        (password != 'TheMaster')? "Incorrect Password":
+        "Welcome"
+    );
 
 </script>

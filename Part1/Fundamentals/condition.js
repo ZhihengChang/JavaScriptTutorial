@@ -41,8 +41,48 @@ let person = (age < 10) ? "child" :
     "man";
 console.log(person);
 
+//The switch statement can replace multiple if checks:
+//NOTE: The type matters
+let x = 3;
+switch(x){
+    case 1: console.log("one");
+    break;
+    case 2: console.log("two");
+    break;
+    case 3: console.log("three");
+    break;
+    default: console.log("the number is not 1,2, or 3");
+}
+//NOTE: if there is no break then the execution continues with the next case without any checks
+
+//Grouping the cases:
+x = 4;
+switch(x){
+    case 1: console.log("one");
+    break;
+    case 2: console.log("two");
+    break;
+    case 3: console.log("three");
+    break;
+    case 4:
+    case 5: console.log("number greater than 3 but less then 6");
+    break;
+    default: console.log("the number is greater than 6");
+}
+
 //check for valid value in x
-let x = null;
-let hasValue = (isNaN(x) | typeof x == 'undefined'| !x)? false : true;
-console.log(hasValue);
+function hasValue(x){ 
+
+    if(isArray(x) && x.length == 0) {
+        return false
+    };
+    if(typeof x == 'object' && Object.keys(x).length == 0) {
+        return false
+    }
+    if((x === 0)? true:false || x){
+        return true;
+    } 
+    return false;
+
+}
 
