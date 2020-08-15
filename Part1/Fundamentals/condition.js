@@ -42,7 +42,18 @@ let person = (age < 10) ? "child" :
 console.log(person);
 
 //check for valid value in x
-let x = null;
-let hasValue = (isNaN(x) | typeof x == 'undefined'| !x)? false : true;
-console.log(hasValue);
+function hasValue(x){ 
+
+    if(isArray(x) && x.length == 0) {
+        return false
+    };
+    if(typeof x == 'object' && Object.keys(x).length == 0) {
+        return false
+    }
+    if((x === 0)? true:false || x){
+        return true;
+    } 
+    return false;
+
+}
 
