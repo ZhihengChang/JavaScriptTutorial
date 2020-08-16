@@ -77,3 +77,32 @@ function pow(x, n){
     return x ** n;
 }
 console.log(pow(2,2));
+
+//Function expressions
+let sayHi = function(){
+    console.log("Hello");
+};
+console.log(sayHi); //this shows the function code
+//we can call the function using:
+sayHi();
+//console.log(sayHi()); 
+//this prints out hello and the function return value which is undefined
+
+console.log("###")
+//in Js, a function is a value so we can deal with it as a value
+let func = sayHi;
+func();
+sayHi();
+
+//callback functions
+function ask(yesOrNo, yes, no){
+    (yesOrNo == "yes")? yes() : no();
+}
+function showOk(){
+    console.log("Okay.");
+}
+function showCancel(){
+    console.log("Canceled.");
+}
+
+ask("yes", showOk, showCancel);
