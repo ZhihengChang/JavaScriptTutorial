@@ -12,3 +12,4 @@
   * [Conditional Branching](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Fundamentals/condition.js)
   * [Logical Operators](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Fundamentals/logicalOperators.js)
   * [Loops](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Fundamentals/loops.js)
+  * [Functions](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Fundamentals/functions.js)
