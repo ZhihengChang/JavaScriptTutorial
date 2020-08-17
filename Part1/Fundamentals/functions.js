@@ -104,5 +104,34 @@ function showOk(){
 function showCancel(){
     console.log("Canceled.");
 }
-
 ask("yes", showOk, showCancel);
+//showOk becomes the callback of yes
+
+//function expression vs function declearation
+//the function expression is usable when the computer reaches it
+//however with function declearation, the function can be called before its declearation.
+
+//Arrow functions
+//let func = (arg1, arg2, ... argN) => expression
+let product = (a, b) => a * b;
+console.log(product(2,2));
+
+let double = n => 2 * n;
+console.log(double(3));
+
+let sayHello = () => console.log("Hello");
+sayHello();
+
+//Arrow functions can be used in the same way as function expressions
+let age = 18;
+let welcome = (age < 18)?
+    ()=> console.log('Hello') :
+    ()=> console.log('Greetings');
+welcome();
+
+//Multiline arrow functions
+let divide = (a, b) => {
+    if(!b) return "Error";
+    return a/b;
+}
+console.log(divide(1,0));
