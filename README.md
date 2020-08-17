@@ -16,3 +16,4 @@
     * [Functions](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Fundamentals/functions.js)
   * [Objects](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Objects)
     * [Objects](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Objects/objects.js)
+    * [Objects Copying, Refrences](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Objects/objectCopy.js)
