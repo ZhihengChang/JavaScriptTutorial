@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Objects Playground</p>
+    </body>
+</html>
+
+<script>
+    
+    // let calculator = {
+    //     read(){
+    //         this.a = prompt("Enter 1st number");
+    //         this.b = prompt("Enter 2nd number");
+    //     },
+    //     sum(){
+    //         alert(+this.a + +this.b);
+    //     },
+    //     mul(){
+    //         alert(this.a * this.b);
+    //     }
+    // }
+
+    //constructor
+    let Calculator = function(){
+        this.read = function(){
+            this.a = prompt("Enter 1st number");
+            this.b = prompt("Enter 2nd number");
+        };
+        this.sum = function(){
+            alert(+this.a + +this.b);
+        };
+        this.mul = function(){
+            alert(this.a * this.b);
+        }
+    }
+    let calculator = new Calculator();
+    // calculator.read();
+    // calculator.sum();
+    // calculator.mul();
+
+    let ladder = {
+        step: 0,
+        up() {
+            this.step++;
+            return this;
+        },
+        down() {
+            this.step--;
+            return this;
+        },
+        showStep: function() { // shows the current step
+            alert( this.step );
+        }
+    };
+    //ladder.up().up().up().up().down().showStep();
+
+    let Accumulator = function(initialValue){
+        this.value = initialValue;
+        this.read = function(){
+            this.value += +prompt("Enter a value:");
+        }
+    }
+
+    let accumulator = new Accumulator(1);
+    accumulator.read();
+    accumulator.read();
+    alert(accumulator.value);
+
+</script>
