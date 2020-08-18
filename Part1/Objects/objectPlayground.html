@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Objects Playground</p>
+    </body>
+</html>
+
+<script>
+    
+    // let calculator = {
+    //     read(){
+    //         this.a = prompt("Enter 1st number");
+    //         this.b = prompt("Enter 2nd number");
+    //     },
+    //     sum(){
+    //         alert(+this.a + +this.b);
+    //     },
+    //     mul(){
+    //         alert(this.a * this.b);
+    //     }
+    // }
+
+    // calculator.read();
+    // calculator.sum();
+    // calculator.mul();
+
+    let ladder = {
+        step: 0,
+        up() {
+            this.step++;
+            return this;
+        },
+        down() {
+            this.step--;
+            return this;
+        },
+        showStep: function() { // shows the current step
+            alert( this.step );
+        }
+    };
+    ladder.up().up().up().up().down().showStep();
+
+</script>
