@@ -20,5 +20,8 @@
     * [Garbage Collection](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Objects/garbageCollection.js)
     * [Objects Methods](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Objects/objectMethods.js)
     * [Objects Constructor](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Objects/constructor.js)
+    * [Optional Chaining](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Objects/chaining.js)
+    * [Symbols](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Objects/symbol.js)
     * [Playground](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Objects/objectPlayground.js)
+    * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Objects/exercise.js)
     
