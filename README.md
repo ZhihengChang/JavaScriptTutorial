@@ -22,6 +22,7 @@
     * [Objects Constructor](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Objects/constructor.js)
     * [Optional Chaining](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Objects/chaining.js)
     * [Symbols](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Objects/symbol.js)
+    * [Object to primitive Conversion](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Objects/conversion.js)
     * [Playground](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Objects/objectPlayground.js)
     * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Objects/exercise.js)
     
