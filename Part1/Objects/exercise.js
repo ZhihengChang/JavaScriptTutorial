@@ -28,36 +28,48 @@ let obj = {
     }
 };
 
-function get_keys_by_level(obj, value, level){
-    let list = [];
-    
-    (level <= 0)? level = 1 :
-    (level > 2)? level = 2 : level = level;
-
-    for(k1 in obj){
-        let level1 = obj[k1];
-        for(k2 in level1){
-            let level2 = level1[k2];
-            if(typeof level2 == "object"){
-                for(key in level2){
-                    if(level2[key] == value){
-                        if(level == 1 && !list.includes(k1)){
-                            list.push(k1);
-                        }else if (level == 2 && !list.includes(k2)){
-                            list.push(k2);
-                        } 
-                    }
-                }
-            }else{
-                if(level2 == value){
-                    if(level == 1 && !list.includes(k1)){ 
-                        list.push(k1);
+function get_keys_by_level(obj, target, level){
+    let result = [];
+    if(!obj) return result;
+    let levelList = get_level(obj, level);
+    if(!levelList) return result;
+    for(let i = 0; i < levelList.length; i++){
+        let cur = levelList[i];
+        for(let key in cur){
+            let value = cur[key];
+            if(typeof value == 'object'){
+                for(let k in value){
+                    if(value[k] == target && !result.includes(k)){
+                        result.push(key);
                     }
                 }
             }
         }
     }
-    return list;
+    return result;
+
+};
+
+function get_level(obj, level){
+    let result = [];
+    let list = [];
+    if(!obj) return result;
+    list.push(obj);
+    for(let lv = 0; lv < level; lv++){
+        let levelList = [];
+        let count = list.length;
+        for(let i = 0; i < count; i++){
+            let cur = list.shift();
+            levelList.push(cur);
+            if(Object.keys(cur).length != 0){
+                for(let key in cur){
+                    list.push(cur[key]);
+                }
+            }
+        }
+        result.push(levelList);
+    }
+    return result[level-1];
 }
-// console.log(typeof obj == 'object');f
-console.log(get_keys_by_level(obj, 'f', 1));
+
+console.log(get_keys_by_level(obj, 'd', 2));
