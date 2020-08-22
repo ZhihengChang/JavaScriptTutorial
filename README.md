@@ -28,4 +28,5 @@
   * [Data Types](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/DataTypes)
     * [Methods of Primitives](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/primitiveMethods.js)
     * [Numbers](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/numbers.js)
+    * [Strings](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/strings.js)
     
