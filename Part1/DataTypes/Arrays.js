@@ -85,6 +85,91 @@ console.log(matrix[1][1]);
 //toString
 arr = [1,2,3]
 console.log(arr.toString());
-console.log();
-console.log();
-console.log();
+
+//Other Array methods:
+//splice: delete an element from the array
+//arr.splice(index[, deleteCount, elem1, ..., elemN])
+//start from index then removes deleteCount elements 
+//and then insert elem1 ... elemN at their place
+//returns the array of removed elements
+arr.splice(1,1);
+console.log(arr);
+//arr = [1,3]
+let removed = arr.splice(0, 1, 0.5, 1.5, 2.5);
+console.log(arr);
+console.log(removed); //is an array
+
+//slice: simlar to splice
+//arr.slice([start], [end])
+//returns a new array copying to it all items from start to end (exclusive)
+//both start and end can be negative
+//arr = [0.5, 1.5, 2.5, 3]
+console.log(arr.slice(1,3)); //copy
+console.log(arr);
+//slice can call without arguments which creates a copy of arr
+
+//concat: creates a new array that includes values from other arrays
+//and additional items:
+//arr.concat(arg1, arg2, ...)
+//The result is a new array containing items from arr, then arg1, arg2...
+console.log(arr.concat(4, 5)); //new array
+console.log(arr.concat([4, 5], 6, 7));
+
+//Objects are copied as a whole:
+console.log(arr.concat({0: "something"}));
+//Object has a special symbol.isConcatSpreadable property:
+let arrayLike = {
+    0: "something",
+    1: "else",
+    [Symbol.isConcatSpreadable]: true,
+    length: 2
+}
+console.log(arr.concat(arrayLike));
+
+//Iterate: forEach
+//forEach allows to run a function for every element of the array
+arr.forEach(function(item, index, array){
+    console.log(`${item} is at index ${index} in ${array}`);
+});
+
+//Searching in array
+/*
+indexOf(item, from): looks for item starting from index from,
+                     and returns the index where it was found, -1 otherwise
+lastIndexOf(item, from): same, but looks for from right to left
+includes(item, from): looks for item starting from index from rturns true if found
+*/
+//arr = [0.5, 1.5, 2.5, 3];
+console.log(arr.indexOf(2.5));
+console.log(arr.indexOf(4));
+//NOTE: the method use === comparison. So it finds exactly the argument
+//NOTE: includes handles NaN correctly unlike indexOf and lastIndexOf
+let nothing = [NaN]
+console.log(nothing.indexOf(NaN)); //should be 0
+console.log(nothing.includes(NaN));
+
+//find and findIndex
+let users = [
+    {id: 1, name: "Ryan"},
+    {id: 2, name: "Jhon"},
+    {id: 3, name: "Mary"},
+    {id: 4, name: "Ann"}
+]
+// let result = users.find(function(item, index, array){
+//     //if true is returned, item is returned and iteration is stopped
+//     //for false scenario returns undefined
+// });
+let result = users.find(item => item.name.length < 4);
+console.log(result);
+
+//filter
+//there may be many items we want to find, we can use .filter(func)
+result = users.filter(item => item.name.length == 4);
+console.log(result);
+
+//transforming an array
+//map(): calls the function for each element of the array and returns the array of results
+result = users.map(item => item.name.length);
+console.log(result);
+
+//sort(func): sorts the array in place changing its element order using provided function
