@@ -30,4 +30,5 @@
     * [Numbers](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/numbers.js)
     * [Strings](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/Strings.js)
     * [Arrays](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/Arrays.js)
+    * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/exercise.js)
     
