@@ -173,3 +173,40 @@ result = users.map(item => item.name.length);
 console.log(result);
 
 //sort(func): sorts the array in place changing its element order using provided function
+arr = [1,4,7,3,9,1,6];
+arr.sort(function(a, b) { return a - b; });
+console.log(arr);  // 1, 2, 15
+
+//reverse: reverse the order of elements in the array
+arr = [1,2,3,4];
+arr.reverse();
+console.log(arr);
+
+//split: splits the string into an array by the diven delimiter
+let str = "one, two, three";
+arr = str.split(", ");
+console.log(arr);
+//NOTE: set delimeter to '' to split the str into letters
+
+//join: reverse of split:
+str = arr.join("; ");
+console.log(str);
+
+/*
+reduce/reduceRight
+use to calculate a single value based on the array
+let value = arr.reduce(function(accumulator, item, index, array) {
+  // ...
+}, [initial]);
+accumulator     – is the result of the previous function call, 
+                  equals initial the first time (if initial is provided).
+item            – is the current array item.
+index           – is its position.
+array           – is the array.
+*/
+arr = [1,2,3,4,5];
+let sum = arr.reduce((acc, current) => acc + current, 0);
+console.log(sum);
+
+//check is array: isArray
+console.log(Array.isArray(arr));
