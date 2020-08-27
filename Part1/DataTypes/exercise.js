@@ -43,3 +43,32 @@ let Calculator = function(){
 
 let calculator = new Calculator();
 console.log(calculator.calculate("1 + 2"));
+
+// return a string fill up with the char (fill_char), 
+// and make max_len = _chars.length + item[0].length + item[1].length + ....
+// If max_len < items.length, return ''. 
+// if no items, then return a string with length of max_len.
+function get_str_to_match_length(max_len, fill_char, ...items){
+    let argLength = arguments.length;
+    let len;
+    if(argLength < 2){ return null; }
+    else if(argLength == 2){
+        len = max_len + 1;
+    }else{
+        let itemsLength = 0;
+        for(let i = 2; i < arguments.length; i++){
+            itemsLength += arguments[i].length;
+        }
+        if(itemsLength > max_len){
+            len = 0;
+        }else{
+            len = max_len + itemsLength + 1;
+        }
+    }
+
+    return new Array(len).join(fill_char); 
+};
+
+let result = get_str_to_match_length(10, "a", "one", "two");
+console.log(result);
+console.log(result.length);
