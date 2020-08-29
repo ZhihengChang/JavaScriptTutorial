@@ -69,6 +69,14 @@ function get_str_to_match_length(max_len, fill_char, ...items){
     return new Array(len).join(fill_char); 
 };
 
-let result = get_str_to_match_length(10, "a", "one", "two");
+// let result = get_str_to_match_length(10, "a", "one", "two");
+// console.log(result);
+// console.log(result.length);
+
+function get_str_to_match_length_enhenced(max_len, fill_char, items){
+    return (typeof items == 'undefined')? fill_char.repeat(max_len) :
+    fill_char.repeat((items.join('').length < max_len)? max_len + items.join('').length : 0);
+}
+result = get_str_to_match_length_enhenced(10, "a", ["one", "two"]);
 console.log(result);
 console.log(result.length);
