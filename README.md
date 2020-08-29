@@ -32,5 +32,8 @@
     * [Arrays](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/Arrays.js)
     * [Iterables](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/iterables.js)
     * [Map](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/Map.js)
+    * [Set](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/Set.js)
+    * [Weak Map and Set](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/weakMapSet.js)
+    * [Destructring Assignment](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/destructure.js)
     * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/exercise.js)
     
