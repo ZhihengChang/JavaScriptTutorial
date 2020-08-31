@@ -35,5 +35,7 @@
     * [Set](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/Set.js)
     * [Weak Map and Set](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/weakMapSet.js)
     * [Destructring Assignment](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/destructure.js)
+    * [Date and Time](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/dateTime.js)
+    * [JSON](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/json.js)
     * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/exercise.js)
     
