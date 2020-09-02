@@ -38,4 +38,7 @@
     * [Date and Time](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/dateTime.js)
     * [JSON](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/json.js)
     * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/DataTypes/exercise.js)
+  * [Functions](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Functions)
+    * [Recursion](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/recursion.js)
+    * [Rest Parameters and Spread Syntax](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/parameters.js)
     
