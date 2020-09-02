@@ -80,3 +80,25 @@ function get_str_to_match_length_enhenced(max_len, fill_char, items){
 result = get_str_to_match_length_enhenced(10, "a", ["one", "two"]);
 console.log(result);
 console.log(result.length);
+
+console.log("-----------------")
+function prt_date(date_str){
+    let date = new Date(date_str);
+    let now = new Date();
+    console.log(date.getMonth())
+    let result = `${getMonthString(date.getMonth())} ${date.getDate()}, `;
+    (date.getFullYear() == now.getFullYear())? 
+    result += `${date.getHours()}:${date.getMinutes()}`:
+    result += date.getFullYear();
+    return result;
+            
+}
+
+function getMonthString(month){
+    let mstrs = [
+        'Jan','Feb','Mar', 'Apr', 'May',
+        'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    ];
+    return mstrs[month];
+}
+console.log(prt_date('2020-12-03T19:44:46.000Z'));
