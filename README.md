@@ -41,4 +41,6 @@
   * [Functions](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Functions)
     * [Recursion](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/recursion.js)
     * [Rest Parameters and Spread Syntax](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/parameters.js)
+    * [var, let, const](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/var.js)
+    * [Function Objects](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/functionObject.js)
     
