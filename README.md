@@ -43,4 +43,8 @@
     * [Rest Parameters and Spread Syntax](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/parameters.js)
     * [var, let, const](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/var.js)
     * [Function Objects](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/functionObject.js)
+    * [New Function](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/new.js)
+    * [Scheduling](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/scheduling.js)
+    * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/exercise.js)
+    
     
