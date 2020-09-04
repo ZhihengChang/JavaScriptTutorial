@@ -28,3 +28,16 @@ function makeCounter(){
 let counter = makeCounter();
 console.log(counter());
 console.log(counter());
+
+//NFE: named function expression
+let sayHello = function func(who){
+    if(who){
+        console.log(`Hello, ${who}`);
+    }else{
+        func("Guest");
+    }
+};
+//NOTE: adding a name doesn't break anything
+//      the function is still available as sayHello()
+//NFE allows the function to reference itself internally: call itself
+//it is not visible outside of the function
