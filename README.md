@@ -49,5 +49,7 @@
     * [Function Binding](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/binding.js)
     * [Arrow Functions](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/arrowFunctions.js)
     * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/exercise.js)
+  * [Property Configuration](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PropertyConfiguration)
+    * [Flags and Descriptor](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PropertyConfiguration/flags.js)
     
     
