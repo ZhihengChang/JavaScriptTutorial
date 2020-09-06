@@ -47,6 +47,7 @@
     * [Scheduling](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/scheduling.js)
     * [Decorators, Call/Apply](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/decorators.js)
     * [Function Binding](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/binding.js)
+    * [Arrow Functions](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/arrowFunctions.js)
     * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/exercise.js)
     
     
