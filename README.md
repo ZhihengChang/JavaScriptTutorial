@@ -52,5 +52,8 @@
   * [Property Configuration](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PropertyConfiguration)
     * [Flags and Descriptor](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PropertyConfiguration/flags.js)
     * [Getters and Setters](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PropertyConfiguration/getterSetter.js)
+  * [Prototypes, Inheritance](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PrototypesInheritance)
+    * [Prototypal Inheritance](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PrototypesInheritance/inheritance.js)
+    * [F.prototype](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PrototypesInheritance/fprototype.js)
     
     
