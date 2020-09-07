@@ -51,5 +51,6 @@
     * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/blob/master/Part1/Functions/exercise.js)
   * [Property Configuration](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PropertyConfiguration)
     * [Flags and Descriptor](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PropertyConfiguration/flags.js)
+    * [Getters and Setters](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PropertyConfiguration/getterSetter.js)
     
     
