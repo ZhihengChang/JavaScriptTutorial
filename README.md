@@ -55,5 +55,8 @@
   * [Prototypes, Inheritance](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PrototypesInheritance)
     * [Prototypal Inheritance](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PrototypesInheritance/inheritance.js)
     * [F.prototype](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PrototypesInheritance/fprototype.js)
+    * [Native Prototype](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PrototypesInheritance/nativePrototype.js)
+    * [Prototype Methods, Objects](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PrototypesInheritance/prototype.js)
+    * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PrototypesInheritance/exercise.js)
     
     
