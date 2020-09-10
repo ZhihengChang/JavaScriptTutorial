@@ -60,5 +60,9 @@
     * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/PrototypesInheritance/exercise.js)
    * [Classes](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Classes)
      * [Class Basic](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Classes/basic.js)
+     * [Class Inheritance](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Classes/inheritance.js)
+     * [Static Properties, Object](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Classes/static.js)
+     * [Public, Private, Protected](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Classes/private.js)
+     * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Classes/exercise.js)
     
     
