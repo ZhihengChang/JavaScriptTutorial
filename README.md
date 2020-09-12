@@ -66,5 +66,7 @@
      * [Class Checking](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Classes/checking.js)
      * [Mixins](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Classes/mixins.js)
      * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Classes/exercise.js)
-    
+   * [Error Handling](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/ErrorHandling)
+     * [Try Catch Block](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/ErrorHandling/errorHandling.js)
+     * [Extending Errors](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/ErrorHandling/extendingError.js)
     
