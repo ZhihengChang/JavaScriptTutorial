@@ -63,6 +63,8 @@
      * [Class Inheritance](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Classes/inheritance.js)
      * [Static Properties, Object](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Classes/static.js)
      * [Public, Private, Protected](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Classes/private.js)
+     * [Class Checking](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Classes/checking.js)
+     * [Mixins](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Classes/mixins.js)
      * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Classes/exercise.js)
     
     
