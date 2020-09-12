@@ -69,4 +69,6 @@
    * [Error Handling](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/ErrorHandling)
      * [Try Catch Block](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/ErrorHandling/errorHandling.js)
      * [Extending Errors](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/ErrorHandling/extendingError.js)
+   * [Promises](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises)
+     * [Introduction](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/intro.js)
     
