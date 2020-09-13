@@ -72,5 +72,7 @@
    * [Promises](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises)
      * [Introduction](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/intro.html)
      * [Promise](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/promise.js)
+     * [Promise Channing](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/channing.js)
+     * [Error Handling in Promise](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/errorHandling.js)
      * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/exercise.html)
     
