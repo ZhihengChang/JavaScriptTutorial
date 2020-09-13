@@ -71,4 +71,6 @@
      * [Extending Errors](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/ErrorHandling/extendingError.js)
    * [Promises](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises)
      * [Introduction](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/intro.html)
+     * [Promise](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/promise.js)
+     * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/exercise.html)
     
