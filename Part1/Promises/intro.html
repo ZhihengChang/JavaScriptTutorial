@@ -6,15 +6,19 @@
 </html>
 
 <script>
-//if there is a function:
+    //if there is a function:
 //  loadScript('/my/script.js'); 
-//the script has function newFunction(){}
+    //the script has function newFunction(){}
 //  newFunction(); //no sunch function
-//Problem: the browser didnt have time to load the script
+    //Problem: the browser didnt have time to load the script
+    //add a callback:
     function loadScript(src, callback) {
         let script = document.createElement('script');
         script.src = src;
         script.onload = () => callback(script);
+        //add an error handling:
+        //modify callback function -> function(error, script)
+        //script.onerror = () => callback(new Error(`Script load error for ${src}`));
         document.head.append(script);
     }
 

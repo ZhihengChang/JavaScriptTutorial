@@ -51,12 +51,12 @@ try{
     console.log(user.name, user.age);
 }catch(err){
     if (err instanceof ValidationError) {
-        console.log("Invalid data: " + err.message); // Invalid data: No property: name
-        console.log(err.name); // PropertyRequiredError
-        console.log(err.property); // name
+        console.log("Invalid data: " + err.message);
+        console.log(err.name); 
+        console.log(err.property);
     } else if (err instanceof SyntaxError) {
         console.log("JSON Syntax Error: " + err.message);
     } else {
-        throw err; // unknown error, rethrow it
+        throw err;
     }
 }
