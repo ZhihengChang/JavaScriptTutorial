@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Promise API</p>
+    </body>
+</html>
+
+<script>
+//There are 5 static methods in the promise class
+//Promise.all
+//takse an array of promises and returns a new promise
+//the new promise resolves when all listed promises are settled
+//the array of their results becomes its result
+Promise.all([
+    new Promise(resolve => setTimeout(() => resolve(1), 3000)),
+    new Promise(resolve => setTimeout(() => resolve(2), 2000)),
+    new Promise(resolve => setTimeout(() => resolve(3), 1000)),
+]).then(console.log);
+//NOTE: the order of the resulting array member is the same
+//if any of the promises is rejected, 
+//the promise returned by promise.all immediately rejects with that error
+
+//Promise.allSettled
+//waits for all promises to settle regardless of the result
+let urls = [
+    'https://api.github.com/users/iliakan',
+    'https://api.github.com/users/remy',
+    'https://no-such-url'
+];
+Promise.allSettled(urls.map(url => fetch(url)))
+    .then(results => { // (*)
+      results.forEach((result, num) => {
+        if (result.status == "fulfilled") {
+          alert(`${urls[num]}: ${result.value.status}`);
+        }
+        if (result.status == "rejected") {
+          alert(`${urls[num]}: ${result.reason}`);
+        }
+      });
+    });
+//NOTE: even a promise is failed, others will still run
+
+//Promise.race
+//waits only for the first settled promise and gets its result or error
+Promise.race([
+  new Promise((resolve, reject) => setTimeout(() => resolve(1), 1000)),
+  new Promise((resolve, reject) => setTimeout(() => reject(new Error("Whoops!")), 2000)),
+  new Promise((resolve, reject) => setTimeout(() => resolve(3), 3000))
+]).then(alert);
+
+</script>
