@@ -74,5 +74,9 @@
      * [Promise](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/promise.js)
      * [Promise Channing](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/channing.js)
      * [Error Handling in Promise](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/errorHandling.js)
+     * [Promise API](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/api.html)
+     * [Promisification](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/promisification.html)
+     * [Microtasks](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/microtasks.js)
+     * [Async/Await](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/async_await.js)
      * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/exercise.html)
     
