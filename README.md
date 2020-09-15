@@ -79,4 +79,7 @@
      * [Microtasks](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/microtasks.js)
      * [Async/Await](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/async_await.js)
      * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Promises/exercise.html)
+   * [Generators](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Generators)
+     * [Generators](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Generators/generators.js)
+     * [Async Iteration](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Generators/async.js)
     
