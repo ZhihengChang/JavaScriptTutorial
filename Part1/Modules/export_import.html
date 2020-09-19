@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Modules</p>
+    </body>
+</html>
+
+<script type="module">
+    // import {sayHi} from './export_import.js';
+    // sayHi("Ryan");
+
+    // import{a, b} from './export_import.js';
+    // a();
+    // b();
+
+    import * as letters from './export_import.js';
+    // letters.a();
+    // letters.b();
+
+    // import {a as A, b as B} from './export_import.js';
+    // A();
+    // B();
+
+    letters.C();
+
+    // import User from './export_import.js';
+    // let newUser = new User('John')
+    // alert(newUser.name);
+
+    // import {default as User} from './export_import.js';
+    import * as user from './export_import.js'
+    let User = user.default;
+    alert(new User('Jhon').name);
+</script>
