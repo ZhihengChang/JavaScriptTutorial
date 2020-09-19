@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Modules</p>
+    </body>
+</html>
+
+<script type="module">
+    //script should be treated as module
+    //A Module is a file. One script is one module
+    //export: labels variables and functions that should be accessible from outside
+    //import: allows the import of functionality from other modules
+    import {sayHi} from './main.js';
+    sayHi('Ryan');
+
+    //NOTE: if the obj is import from multiple files, 
+    //The module is only evaluated the first time
+    //admin object is created and then passed to all further importers
+    import {obj} from './main.js';
+    alert(obj.value);
+    obj.value = 40;
+    alert(obj.value);
+
+    //import.meta: contains the information about the current module
+    alert(import.meta.url);
+    //script url
+
+    //NOTE: in module "this" is undefined
+    alert(this);
+
+    //NOTE the script type module always see the full HTML
+    //instead of regular script have to go below
+</script>

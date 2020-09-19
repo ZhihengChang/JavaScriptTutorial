@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Dynamic Import</p>
+    </body>
+</html>
+
+<script type="module">
+    //static imports can NOT:
+    //  dynamically generate any parameters of import
+    //  import conditionally or at run-time
+
+    //Dynamic import:
+    //import() expression
+    async function load(){
+        let {sayHi, sayBye} = await import('./main.js');
+        sayHi("Ryan");
+        sayBye("Ryan");
+    }
+    load();
+    
+    
+</script>
