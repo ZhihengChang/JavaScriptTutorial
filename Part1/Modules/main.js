@@ -1,5 +1,9 @@
 export function sayHi(user){
-    console.log(`Hello ${user}`);
+    alert(`Hello ${user}`);
+}
+
+export function sayBye(user){
+    alert(`Bye ${user}`);
 }
 
 export let obj = {
