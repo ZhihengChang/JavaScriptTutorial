@@ -82,4 +82,7 @@
    * [Generators](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Generators)
      * [Generators](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Generators/generators.js)
      * [Async Iteration](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Generators/async.js)
-    
+   * [Modules](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Modules)
+     * [Modules](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Modules/modules.html)
+     * [Export and Import](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Modules/export_import.js)
+     * [Dynamic Import](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Modules/dynamic.html)
