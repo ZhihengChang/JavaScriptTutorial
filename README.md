@@ -86,3 +86,6 @@
      * [Modules](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Modules/modules.html)
      * [Export and Import](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Modules/export_import.js)
      * [Dynamic Import](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part1/Modules/dynamic.html)
+* Part 2
+  * [Document](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document)
+    * [DOM](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/dom.html)
