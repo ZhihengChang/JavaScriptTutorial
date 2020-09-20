@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+        <p>Browser environment, specs</p>
+    </body>
+</html>
+
+<script>
+/*
+    DOM Document Object Model
+    represents all page content as objects that can be modified
+    The document object is the main entry point to the page
+*/
+    document.body.style.background = "red";
+    setTimeout(() => document.body.style.background = "", 1000);
+
+/*
+    BOM Browser Object Model
+    The BOM represents additional objects provided by the browser
+    for working with everything except the document
+*/
+    alert(location.href); //shows current URL
+    if (confirm("Go to Wikipedia?")) {
+        location.href = "https://wikipedia.org"; 
+    }
+    //NOTE: alert/confirm/prompt are also a part of BOM
+    //they are directly not related to the document
+    //but represent pure browser methods of communicating with the user
+    
+/*
+    Every HTML tag is an object. Nested tags are children of the enclosing one
+    the text inside a tag is an object as well
+    All these objects are accessible using JS
+*/
+    //NOTE: the above html is a simple DOM
+    //DOM tree:
+    /*
+        -> HTML
+            -> BODY
+                -> P
+                    -> TEXT
+            -> HEAD
+                -> TITLE
+                    -> TEXT
+    */
+
+    //NOTE: Everything in HTML even comments becomes a part of the DOM
+
+</script>
