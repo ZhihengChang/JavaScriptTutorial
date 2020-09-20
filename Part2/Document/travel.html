@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+        <p>Walking the DOM</p>
+    </body>
+</html>
+
+<script>
+    /*
+    All operations on the DOM start with the document object. That’s the main “entry point” to DOM. 
+    From it we can access any node.
+    document -> document.documentElement(HTML) -> document.body -> div etc
+
+    On top:
+        <html> = document.documentElement
+        <body> = document.body
+        <head> = document.head
+    
+    Children: childNodes, firstChild, lastChild
+        head and body are children of html
+        body has children div and ul
+    */
+   for (let i=0; i<document.body.childNodes.length; i++){
+       alert(document.body.childNodes[i]);
+   }
+   //NOTE: Properties firstChild and lastChild give fast access to the first and last children.
+   // DOM collections are read-only (use for of not for in)
+   
+    /*
+    Siblings and the parent
+    <body> is said to be the “next” or “right” sibling of <head>,
+    <head> is said to be the “previous” or “left” sibling of <body>.
+    */
+    alert( document.body.parentNode === document.documentElement );
+    alert( document.head.nextSibling );
+    alert( document.body.previousSibling );
+
+</script>
