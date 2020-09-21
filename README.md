@@ -90,3 +90,5 @@
   * [Document](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document)
     * [DOM](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/dom.html)
     * [Walking with DOM](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/travel.html)
+    * [Searching](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/searching.html)
+    * [Node properties](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/node.html)
