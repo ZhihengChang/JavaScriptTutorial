@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+        <div id = "content">
+            <p id="topic">Node properties: Type, tag and contents</p>
+        </div>
+    </body>
+</html>
+
+<script>
+    /*
+    each dom node belongs to the corresponding built-in class
+    the root of the hierarchy is EventTarget, inherited by node
+    EventTarget
+        ->Node
+            ->Text
+            ->Element
+                ->HTMLElement
+                    ->HTMLInputElement
+                    ->HTMLBodyElement
+                    ->HTMLAnchorElement
+                ->SVGElement
+            ->Comment
+    
+    EventTarget: is the root "abstract" class. as a base
+    Node: also an abstract class, base for DOM nodes
+        provides the core tree functionality: parentNode, nextSibling, childNodes
+    Element: is a base class for DOM element, provides element-level navigation
+        like nextElementSibling, children and searching method
+    HTMLElement: basic class for all HTML elements
+        input, body, anchor(a), etc
+    */
+   //to see DOM node class name:
+   alert(document.body.constructor.name);
+
+   //nodeType
+   //numeric value element node == 1, text node == 3, document == 9 etc
+   alert(document.nodeType);
+   alert(document.body.nodeType);
+
+   //innerHTML allows to get the HTML inside the element as string
+   alert(document.body.innerHTML);
+   //NOTE: if innerHTML inserts a script tag, it becomes a part of HTML but doesn't execute
+
+   //outerHTML: full HTML of the element
+   alert(topic.outerHTML);
+
+   //NOTE: innerHTML property is only valid for element node
+   //for other node types, use nodeValue and data
+
+   //textContent: pure text
+   alert(content.textContent);
+</script>

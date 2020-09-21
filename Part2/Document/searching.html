@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body>
+        <a href="http://example.com/file.zip">link1</a>
+        <a href="http://ya.ru">link2</a>
+        <div id = "elem">
+            <div id = 'elem-content'>Element</div>
+        </div>
+        <ul class = "list">
+            <li class = "item">A.1</li>
+            <li class = "item">A.2</li>
+        </ul>
+        <ul>
+            <li>B.1</li>
+            <li>B.2</li>
+        </ul>
+        <p>Searching</p>
+    </body>
+</html>
+
+<script>
+    //document.getElementById or just id
+    // let elem = document.getElementById('elem');
+    // elem.style.background = 'red';
+    //grab with id:
+    elem.style.background = 'red';
+    //NOTE: do NOT use id-named global variables to access elements
+    //The id must be unique
+    //Only document.getElementById not any other element
+
+    //querySelectorAll
+    let elements = document.querySelectorAll('ul > li:last-child');
+    for (let elem of elements){
+        alert(elem.innerHTML);
+    }
+
+    //querySelector
+    //returns the first element for the given css selector
+    //same as elem.querySelectorAll(css)[0]
+
+    //matches
+    //checks if elem matches the given css-selector return true or false
+    for (let elem of document.body.children) {
+        if (elem.matches('a[href$="zip"]')) {
+            alert("The archive reference: " + elem.href );
+        }
+    }
+
+    //closest
+    //looks the nearest ancestor that matches the css-selector
+    //includes itseft during search
+    let item = document.querySelector('.item');
+    alert(item.closest('.list'));
+
+    //getElementsByTagName/ClassName/Name
+    let lis = document.getElementsByTagName('li');
+    let searchFor = "B.1";
+    for(let li of lis){
+        if (li.innerHTML == searchFor){
+            alert("found B.1");
+        }
+    }
+    //NOTE: this returns a collection
+    //NOTE: getElementsBy* return live collection, querySelector return static 
+    
+</script>
