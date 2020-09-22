@@ -92,3 +92,4 @@
     * [Walking with DOM](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/travel.html)
     * [Searching](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/searching.html)
     * [Node properties](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/node.html)
+    * [DOM Attribute and Properties](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/attrAndProp.html)
