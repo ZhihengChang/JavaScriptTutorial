@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+    </head>
+    <body id = "main" something = "non-standard">
+        <p >body with a non-standard attribute</p>
+        <input id = "input" type = "checkbox" checked> checkbox
+        <p id = "info" data-about = "content">some info</p>
+    </body>
+</html>
+
+<script>
+    //When the browser loads the page, it parses the HTML 
+    //and generates DOM objects from it
+    //Ex: <body id = "page"> -> body.id = "page"
+    //add own DOM properties
+    document.body.myData = {
+        title: 'My Data',
+        content: 'some content'
+    };
+    alert(document.body.myData.title);
+
+    //add a method:
+    document.body.sayTagName = function(){
+        alert(this.tagName);
+    }
+    document.body.sayTagName();
+
+    //can also modify built-in prototypes like Element.prototype and add new methods to all element
+    Element.prototype.sayHi = function(){
+        alert(`Hello, I'm ${this.tagName}`);
+    };
+    document.documentElement.sayHi();
+
+    //HTML attributes
+    alert(document.body.id);
+    alert(document.body.something);
+    //NOTE: a standard attribute for one element can be unknown for another one
+
+    //Methods to access attributes:
+    /*
+    * elem.hasAttribute(name): checks for existence
+    * elem.getAttribute(name): gets the value
+    * elem.setAttribute(name, value): set the value
+    * elem.removeAttribute(name): removes the attribute
+    */
+   alert(document.body.getAttribute('something'));
+   //NOTE: name is case-insensitive
+   //The values are always string
+
+   //Property -attribute synchronization
+   //when a standard attribute changes, the corresponding property is auto updated
+   //and (with some exceptions) vice versa
+
+   //DOM properties are not always string
+   //ex: input.checked property (for checkboxes) is a boolean
+   alert(input.getAttribute('checked'));
+   alert(input.checked);
+
+   //All attributes starting with “data-” are reserved for programmers’ use. They are available in the dataset property.
+   alert(info.dataset.about);
+</script>
