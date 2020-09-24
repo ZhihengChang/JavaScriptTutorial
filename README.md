@@ -94,3 +94,6 @@
     * [Node properties](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/node.html)
     * [DOM Attribute and Properties](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/attrAndProp.html)
     * [Modifying DOM](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/modifying.html)
+    * [Styles and Classes](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/style.html)
+  * [Event](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event)
+    * [Intro to Event](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/intro.html)
