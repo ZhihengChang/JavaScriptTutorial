@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event</title>
+    </head>
+    <body>
+        <input value="Square" onclick="square()" type="button">
+        <input id="elem" type="button" value="Click me">
+        <input id="btn" type="button" value="Event Object">
+        <input id="btn2" type="button" value="Object">
+        <button id="btn3">Click me</button>
+    </body>
+</html>
+<script>
+    /*
+    * Browser Event
+    * click, contextmenu(right click) mouseover, mousedown, mousemove
+    * keyboard: keydown keyup
+    * Element: submit focus
+    * Document: DOMContentLoaded
+    * CSS: transitioned
+    * 
+    * Event handlers:
+    * are a way to run JS code in case of user actions
+    */
+    function square() {
+        let n = prompt("enter a number", "0");
+        alert((+n)**2);
+    }
+
+    //assign a handler using a dom property:
+    elem.onclick = function(){
+        alert('Thank you');
+    }
+
+    //addEventListener:
+    function handler1(){
+        alert('Thanks!');
+    }
+    function handler2() {
+        alert('Thanks again!');
+    }
+    elem.addEventListener("click", handler1);
+    elem.addEventListener("click", handler2);
+
+    //Event Object:
+    btn.onclick = function(event){
+        alert(event.type + " at " + event.currentTarget);
+        alert("Coordinates: " + event.clientX + ":" + event.clientY);
+    }
+    //NOTE: event object is also available in HTML handlers
+
+    //using addEventListener can also add object
+    let obj = {
+        handleEvent(event){
+            alert(event.type);
+        }
+    };
+    btn2.addEventListener('click', obj);
+
+    //class:
+    class Menu {
+        handleEvent(event) {
+            switch(event.type) {
+                case 'mousedown':
+                    btn3.innerHTML = "Mouse button pressed";
+                    break;
+                case 'mouseup':
+                    btn3.innerHTML += "...and released.";
+                    break;
+            }
+        }
+    } 
+    let menu = new Menu();
+    btn3.addEventListener('mousedown', menu);
+    btn3.addEventListener('mouseup', menu);
+
+</script>
