@@ -20,3 +20,5 @@ if( typeof module != 'undefined'){
     module.exports = User;
 }
 
+//https://blog.logrocket.com/how-to-use-ecmascript-modules-with-node-js/
+

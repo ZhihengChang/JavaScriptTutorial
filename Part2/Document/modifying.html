@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+        <style>
+            .alert {
+              padding: 15px;
+              border: 1px solid #d6e9c6;
+              border-radius: 4px;
+              color: #3c763d;
+              background-color: #dff0d8;
+            }
+        </style>
+    </head>
+    <body>
+        <ol id="ol">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+          </ol>
+        <div class="alert">
+            <strong>Hi there!</strong> You've read an important message.
+        </div>
+        <div id = 'div'></div>
+        <div id="first">First</div>
+        <div id="second">Second</div>
+
+        <ul id="ul"></ul>
+    </body>
+</html>
+
+<script>
+    //create DOM nodes:
+    let div = document.createElement('div');
+    div.className = "alert";
+    div.innerHTML = "<strong>Hi there!</strong> You've read an important message.";
+    //NOTE: the div is only a variable now, not in the page yet
+
+    //insert:
+    document.body.append(div);
+    /*
+    more options:
+    node.append(...nodes or string): append nodes or strings at the end of the node
+    node.prepend(...nodes or string): insert nodes or strings at the beginning of node
+    node.before(...nodes or strings): insert nodes or strings before node
+    node.after(...nodes or strings): insert nodes or strings after node
+    node.replaceWith(...nodes or strings): replaces node with the given nodes or strings.
+    */
+    ol.before('before');
+    ol.after('after'); 
+
+    let liFirst = document.createElement('li');
+    liFirst.innerHTML = 'prepend';
+    ol.prepend(liFirst);
+    //NOTE: these methods can only be used to insert DOM nodes or test pieces
+
+    //insert an HTML string as html 
+    //elem.insertAdjacentHTML(where, html)
+    /*
+    'where' parameter:
+    "beforebegin" – insert html immediately before elem,
+    "afterbegin" – insert html into elem, at the beginning,
+    "beforeend" – insert html into elem, at the end,
+    "afterend" – insert html immediately after elem.
+    */
+    div.insertAdjacentHTML('beforebegin', '<p>Hello</p>');
+    div.insertAdjacentHTML('afterend', '<p>Bye</p>');
+
+    //remove a node:
+    setTimeout(() => div.remove(), 1000);
+
+    //swap:
+    //note: no need to remove:
+    second.after(first);
+
+    //clone:
+    //elem.cloneNode(true)/(false): ture: with all attributes and sub elements
+    //false: without child elements
+    let div2 = div.cloneNode(true); // clone the message
+    div2.querySelector('strong').innerHTML = 'Bye there!';
+    div.after(div2);
+
+    //DocumentFragment
+    //a wrapper to pass around lists of nodes.
+    function getListContent(n) {
+        let fragment = new DocumentFragment();
+        for(let i=1; i<=n; i++) {
+            let li = document.createElement('li');
+            li.append(i);
+            fragment.append(li);
+        }
+        return fragment;
+    }
+    ul.append(getListContent(5));
+</script>
