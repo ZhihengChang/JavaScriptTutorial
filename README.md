@@ -97,3 +97,4 @@
     * [Styles and Classes](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/style.html)
   * [Event](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event)
     * [Intro to Event](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/intro.html)
+    * [Exercise](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/exercise.html)
