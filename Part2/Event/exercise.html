@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event</title>
+        <style>
+            #field {
+                position: relative;
+            }
+
+            #ball{
+                position: relative;
+                width: 20px;
+                height: 20px;
+                transition: all 1s;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="button" id="hider" value="Click to hide the text" />
+        <input type="button" id="self" onclick="this.hidden = true" value="Click to hide myself"/>
+        <div id="text">Text</div>
+        <input type="button" id="start" value="Play"/>
+        <div id="field">
+            <img src="https://en.js.cx/clipart/ball.svg" id="ball" hidden>
+        </div>
+        <input type="button" id="quit" value="Exit Game" hidden/>
+        
+    </body>
+</html>
+<script>
+    function hide(){
+        document.getElementById('text').hidden = true;
+    }
+    hider.onclick = hide;
+
+    let field = document.querySelector('#field');
+    let quit = document.querySelector('#quit');
+    let ball = document.querySelector('#ball');
+
+    function setUpThefield(){
+        field.style.width = "200px";
+        field.style.height = "300px";
+        field.style.backgroundColor = "green";
+        field.style.border = "solid 3px";
+        ball.style.top = "50%";
+        ball.style.left = "45%";
+        quit.hidden = false;
+        ball.hidden = false;
+    }
+    start.onclick = setUpThefield;
+
+    function exitGame(){
+        field.style.removeProperty('width');
+        field.style.removeProperty('height');
+        field.style.removeProperty('backgroundColor');
+        field.style.removeProperty('border');
+        quit.hidden = true;
+        ball.hidden = true;
+    }
+    quit.onclick = exitGame;
+
+    field.onclick = function(event) {
+
+        let fieldPos = this.getBoundingClientRect();
+        //top = y - window to border - border - half ball
+        //left = x - window to border - border - half ball
+        let ballPos = {
+            top: event.clientY - fieldPos.top - field.clientTop - ball.clientHeight / 2,
+            left: event.clientX - fieldPos.left - field.clientLeft - ball.clientWidth / 2
+        };
+        //check top
+        if (ballPos.top < 0) ballPos.top = 0;
+        //check left
+        if (ballPos.left < 0) ballPos.left = 0;
+        //check right
+        if (ballPos.left + ball.clientWidth > field.clientWidth) {
+            ballPos.left = field.clientWidth - ball.clientWidth;
+        }
+        //check bot
+        if (ballPos.top + ball.clientHeight > field.clientHeight) {
+            ballPos.top = field.clientHeight - ball.clientHeight;
+        }
+
+        ball.style.left = ballPos.left + 'px';
+        ball.style.top = ballPos.top + 'px';
+    }
+
+</script>
