@@ -3,6 +3,37 @@
     <head>
         <title>Event</title>
         <style>
+            h4 {
+                margin: 0;
+                padding-bottom: .3em;
+                font-size: 1.1em;
+            }
+
+            p {
+                margin: 0;
+                padding: 0 0 .5em;
+            }
+
+            .pane {
+                background: #edf5e1;
+                padding: 10px 20px 10px;
+                border-top: solid 2px #c4df9b;
+            }
+
+            .remove-button {
+                position: absolute;
+                font-size: 110%;
+                top: 0;
+                color: darkred;
+                right: 10px;
+                display: block;
+                width: 24px;
+                height: 24px;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+            }
+
             #field {
                 position: relative;
             }
@@ -16,9 +47,9 @@
         </style>
     </head>
     <body>
-        <input type="button" id="hider" value="Click to hide the text" />
-        <input type="button" id="self" onclick="this.hidden = true" value="Click to hide myself"/>
-        <div id="text">Text</div>
+        <!--<input type="button" id="hider" value="Click to hide the text" />-->
+        <!-- <input type="button" id="self" onclick="this.hidden = true" value="Click to hide myself"/> -->
+        <!-- <div id="text">Text</div> -->
         <input type="button" id="start" value="Play"/>
         <div id="field">
             <img src="https://en.js.cx/clipart/ball.svg" id="ball" hidden>
@@ -28,16 +59,35 @@
     </body>
 </html>
 <script>
-    function hide(){
-        document.getElementById('text').hidden = true;
-    }
-    hider.onclick = hide;
+    // function hide(){
+    //     document.getElementById('text').hidden = true;
+    // }
+    // hider.onclick = hide;
 
+    let start = document.getElementById('start');
     let field = document.querySelector('#field');
     let quit = document.querySelector('#quit');
     let ball = document.querySelector('#ball');
+    
+    let notified = false;
+    
+    function createNotification(message){
+        let div = document.createElement('div');
+        div.className = "pane";
+        div.innerHTML = `<h4>Notification</h4> <p>${message}</p>`;
+        div.insertAdjacentHTML("afterbegin", '<button class="remove-button">[x]</button>');
+        div.firstChild.onclick = function(){
+            div.remove();
+            notified = false;
+        };
+        document.body.prepend(div);
+    }
 
     function setUpThefield(){
+        if(!notified){
+            createNotification("The Game is Running ...");
+            notified = true;
+        }
         field.style.width = "200px";
         field.style.height = "300px";
         field.style.backgroundColor = "green";
@@ -50,6 +100,10 @@
     start.onclick = setUpThefield;
 
     function exitGame(){
+        if(notified){
+            document.body.firstChild.remove();
+        }
+        createNotification("The Game is Successfully Quit"); 
         field.style.removeProperty('width');
         field.style.removeProperty('height');
         field.style.removeProperty('backgroundColor');
