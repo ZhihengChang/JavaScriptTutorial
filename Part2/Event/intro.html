@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Event</title>
-    </head>
-    <body>
-        <input value="Square" onclick="square()" type="button">
-        <input id="elem" type="button" value="Click me">
-        <input id="btn" type="button" value="Event Object">
-        <input id="btn2" type="button" value="Object">
-        <button id="btn3">Click me</button>
-    </body>
+
+<head>
+    <title>Event</title>
+</head>
+
+<body>
+    <input value="Square" onclick="square()" type="button">
+    <input id="elem" type="button" value="Click me">
+    <input id="btn" type="button" value="Event Object">
+    <input id="btn2" type="button" value="Object">
+    <button id="btn3">Click me</button>
+</body>
+
 </html>
 <script>
     /*
@@ -25,16 +28,16 @@
     */
     function square() {
         let n = prompt("enter a number", "0");
-        alert((+n)**2);
+        alert((+n) ** 2);
     }
 
     //assign a handler using a dom property:
-    elem.onclick = function(){
+    elem.onclick = function () {
         alert('Thank you');
     }
 
     //addEventListener:
-    function handler1(){
+    function handler1() {
         alert('Thanks!');
     }
     function handler2() {
@@ -44,7 +47,7 @@
     elem.addEventListener("click", handler2);
 
     //Event Object:
-    btn.onclick = function(event){
+    btn.onclick = function (event) {
         alert(event.type + " at " + event.currentTarget);
         alert("Coordinates: " + event.clientX + ":" + event.clientY);
     }
@@ -52,7 +55,7 @@
 
     //using addEventListener can also add object
     let obj = {
-        handleEvent(event){
+        handleEvent(event) {
             alert(event.type);
         }
     };
@@ -61,7 +64,7 @@
     //class:
     class Menu {
         handleEvent(event) {
-            switch(event.type) {
+            switch (event.type) {
                 case 'mousedown':
                     btn3.innerHTML = "Mouse button pressed";
                     break;
@@ -70,9 +73,15 @@
                     break;
             }
         }
-    } 
+    }
     let menu = new Menu();
     btn3.addEventListener('mousedown', menu);
     btn3.addEventListener('mouseup', menu);
+
+    document.addEventListener('click', function (event) {
+        if (event.target.dataset.counter != undefined) {
+            event.target.value++;
+        }
+    });
 
 </script>

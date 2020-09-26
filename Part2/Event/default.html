@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event</title>
+</head>
+
+<body>
+    <a href="https://www.google.com/">google</a> </br>
+    <a href="https://www.google.com/" onclick="return false">a not-working google</a> </br>
+    <a href="https://www.google.com/" onclick="event.preventDefault()">another not-working google</a> </br>
+
+    <a href="Hello" id="say">say</a>
+    <button id="btn">Right-click for the button menu</button>
+</body>
+
+</html>
+<script>
+    /*
+    * browser default action example:
+    * A click on a link – initiates navigation to its URL.
+    * A click on a form submit button – initiates its submission to the server.
+    * Pressing a mouse button over a text and moving it – selects the text.
+    */
+
+    //1. use an event object
+    // <a href="/" onclick="return false"></a> or
+    //<a href="/" onclick="event.preventDefault()"></a>
+    say.onclick = function () {
+        if (event.target.nodeName != 'A') return;
+        let href = event.target.getAttribute('href');
+        alert(href);
+        return false; //prevent browser action 
+    };
+
+    //2. passive handler
+    //The optional passive: true option of addEventListener signals the browser 
+    //that the handler is not going to call preventDefault().
+    btn.oncontextmenu = function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        alert("Button context menu");
+    };
+
+    document.oncontextmenu = function (event) {
+        event.preventDefault();
+        alert("Document context menu");
+    };
+</script>
