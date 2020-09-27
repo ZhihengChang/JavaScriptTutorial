@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event</title>
+</head>
+
+<body>
+    <button id="btn">click</button>
+    <button id="button">Alt + Shift + Click</button>
+    <input onmousemove="this.value=event.clientX+':'+event.clientY" value="Mouse over to show coordinates">
+</body>
+
+</html>
+<script>
+    /*
+    * Mouse Event:
+    * mousedown/mouseup - clicked or released
+    * mouseover/mouseout - Mouse pointer comes over/out from an element.
+    * mousemove
+    * click
+    * dbclick - double click
+    * contextmenu - right click
+    * 
+    * when multiple event handlers are triggered the order is fixed: mousedown → mouseup → click
+    */
+
+    //mouse button: user event.button to get the number
+    /*
+    *    Left button (primary)	    0
+    *    Middle button (auxiliary)	1
+    *    Right button (secondary)	2
+    *    X1 button (back)	        3
+    *    X2 button (forward)	    4
+    */
+    btn.onclick = function(event){
+       alert(event.button);
+    }
+
+    //modifiers:
+    /*
+    *   shiftKey:   Shift
+    *   altKey:     Alt (or Opt for Mac)
+    *   ctrlKey:    Ctrl
+    *   metaKey:    Cmd for mac
+    *
+    */
+    button.onclick = function (event) {
+        if (event.altKey && event.shiftKey) {
+            alert("Alt + Shift + Click");
+        }
+    };
+
+    //coordinates: clientX/clientY, pageX/pageY
+    //Window-relative: clientX and clientY.
+    //Document-relative: pageX and pageY.
+
+</script>

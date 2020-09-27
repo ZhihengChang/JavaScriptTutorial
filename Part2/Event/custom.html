@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event</title>
+</head>
+
+<body>
+    <button id="elem" onclick="alert('Click!');">Autoclick</button>
+    <h1 id="h">Hello from the script!</h1>
+    <pre id="rabbit">
+        |\   /|
+         \|_|/
+         /. .\
+        =\_Y_/=
+         {>o<}
+    </pre>
+    <button onclick="hide()">Hide()</button>
+    <button id="menu">Menu (click me)</button>
+</body>
+
+</html>
+<script>
+    /*
+    * Custom events
+    * syntax: let event = new Event(type[, options]);
+    * type       event type, ex: "click" or cumstom name ("my-event").
+    * options    the object with two optional properties:
+    *                  bubbles: if true, then the event bubbles.
+    *                  cancelable: if true, then the “default action” may be prevented.
+    *            By default both are false: {bubbles: false, cancelable: false}.
+    * 
+    * dispatchEvent: run the created event on element
+    */
+    let event = new Event("click");
+    elem.dispatchEvent(event);
+    //NOTE: There is a way to tell a “real” user event from a script-generated one.
+    //      event.isTrusted is true for events that come from real user actions and false for script-generated events.
+
+    //Bubbling:
+    document.addEventListener("hello", function (event) {
+        alert("Hello from " + event.target.tagName);
+    });
+    event = new Event("hello", { bubbles: true });
+    h.dispatchEvent(event);
+
+    //classes for UI Events:
+    //UIEvent, FocusEvent, MouseEvent, WheelEvent, KeyboardEvent
+    //suggest: use new MouseEvent("click") instead of new Event
+    event = new MouseEvent("click", {
+        bubbles: true,
+        cancelable: true,
+        clientX: 100,
+        clientY: 100
+    });
+
+    alert(event.clientX);
+    //NOTE new Event does not allow this
+
+    //preventDefault():
+    function hide() {
+        let event = new CustomEvent("hide", {
+            cancelable: true // without that flag preventDefault doesn't work
+        });
+        if (!rabbit.dispatchEvent(event)) {
+            alert('The action was prevented by a handler');
+        } else {
+            rabbit.hidden = true;
+        }
+    }
+
+    rabbit.addEventListener('hide', function (event) {
+        if (confirm("Call preventDefault?")) {
+            event.preventDefault();
+        }
+    });
+
+    //NOTE: Usually events are processed in a queue, however with dispatchEvent the event runs immediately 
+    //to fix it, could add a 0 sec setTimeout
+    menu.onclick = function () {
+        alert(1);
+
+        setTimeout(() => menu.dispatchEvent(new CustomEvent("menu-open", {
+            bubbles: true
+        })));
+
+        alert(2);
+    };
+
+    document.addEventListener('menu-open', () => alert('nested'));
+</script>
