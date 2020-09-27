@@ -99,3 +99,5 @@
     * [Intro to Event](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/intro.html)
     * [Event Delegation](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/delegation.html)
     * [Browser Default Event](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/default.html)
+    * [Event Dispatching](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/custom.html)
+    * [Mouse Event](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/mouseEvent.html)
