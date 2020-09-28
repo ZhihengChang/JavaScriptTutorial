@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event</title>
+</head>
+
+<body>
+    <input type="text" id="textFeild">
+    <input type="button" value="Button">
+    <br />
+    <input type="text" id="input"> oninput: <span id="result"></span>
+    <br />
+    <input type="text" id="input2">
+</body>
+
+</html>
+<script>
+    /*
+    * Event: change
+    * the change event triggers when the element has finished changing
+    * for text inputs that means that the event occurs when it loses focus
+    * .onchange = function(){...}
+    * for select, checkbox/radio it triggers right after the slection change
+    */
+    textFeild.onchange = function () {
+        alert(this.value);
+    }
+
+    //Event: input
+    //the input event triggers every time after a value is modified by the user
+    input.oninput = function () {
+        result.innerHTML = input.value;
+    };
+
+    //Event: cut, copy, paste
+    //occur on cutting/copying/pasting
+    input2.oncut = input.oncopy = input.onpaste = function (event) {
+        alert(event.type + ' - ' + event.clipboardData.getData('text/plain'));
+        return false;
+    };
+</script>
