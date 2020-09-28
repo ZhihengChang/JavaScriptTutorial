@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event</title>
+</head>
+
+<body>
+    <form name="my">
+        <input name="one" value="1">
+        <input name="two" value="2">
+    </form>
+    <form>
+        <input type="radio" name="age" value="10">
+        <input type="radio" name="age" value="20">
+    </form>
+    <form id="form">
+        <fieldset name="userFields">
+          <legend>info</legend>
+          <input name="login" type="text">
+        </fieldset>
+    </form>
+
+    <select id="select">
+        <option value="apple">Apple</option>
+        <option value="pear">Pear</option>
+        <option value="banana">Banana</option>
+    </select>
+</body>
+
+</html>
+<script>
+    /*
+    * Navigation: form and elements
+    * document.forms
+    * named collection; its both named and ordered
+    * document.forms.my - the form with name="my"
+    * document.forms[0] - the first form in the document
+    */
+    //get the form
+    let form = document.forms.my;
+    //get element
+    let elem = form.elements.one;
+    alert(elem.value);
+
+    form = document.forms[1];
+    let ages = form.elements.age;
+    alert(ages.length);
+    alert(`age elements: ${ages[0].value}, ${ages[1].value}`);
+
+    //fieldset:
+    form = document.forms.form;
+    let fieldset = form.elements.userFields;
+    alert(fieldset.elements.login == form.elements.login);
+    //NOTE: a form references all elements
+
+    //form controls
+    //input.value (string) to acess their value
+    //input.checked (boolean) for checkboxes
+    //NOTE: .value not .innerHTML
+    //slect and option
+    //select.options returns the collection of option subelements
+    //select.value returns the value of the currently selected option
+    //select.selectedIndex returns the number of the currently selected option
+    //to set value for select:
+    //find the corresponding option element and set option.selected to true
+    //set select.value
+    //select.selectedIndex to the number of the option
+    select.options[2].selected = true;
+    select.selectedIndex = 2;
+    select.value = 'banana';
+</script>
