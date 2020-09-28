@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event</title>
+    <style>
+        .invalid { background: red; }
+        #error { color: red }
+    </style>
+</head>
+
+<body>
+    Your email please: <input type="email" id="input">
+    <div id="error"></div>
+
+    Your email please: <input type="email" id="input2">
+    <input type="text" style="width:220px" placeholder="make email invalid and try to focus here">
+</body>
+
+</html>
+<script>
+    /*
+    * An element receives the focus when the user either clicks on it 
+    * or uses the Tab key on the keyboard. 
+    * autofocus HTML attribute that puts the focus onto an element by default 
+    * when a page loads and other means of getting the focus.
+    * focusing on an element mens prepare to accept the data here
+    * losing the focus ("blur") when user clicks somewhere else
+    * means the data has been entered
+    */
+    input.onblur = function(){
+        if(!input.value.includes('@')){
+            input.classList.add('invalid');
+            error.innerHTML = 'Invalid Email Address';
+        }
+    };
+    input.onfocus = function(){
+        if(this.classList.contains('invalid')){
+            this.classList.remove('invalid');
+            error.innerHTML = "";
+        }
+    };
+
+    //focus/blur methods
+    input2.onblur = function(){
+        if(!this.value.includes('@')){
+            this.classList.add('invalid');
+            input2.focus();
+        }else{
+            this.classList.remove('invalid');
+        }
+    }
+</script>
