@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM</title>
+</head>
+
+<body>
+    <img id="img" src="https://en.js.cx/clipart/train.gif?speed=1&cache=0">
+</body>
+
+</html>
+
+<script>
+    /*
+    * lifecycle of an HTML page:
+    * DOMContentLoaded: the browser fully loaded HTML, and the DOM tree is built
+    *                   but external resources like pictures img and css maynot yet
+    * load: not only HTML is loaded, but also all the external resources
+    * beforeunload/unload: the user is leaving the page
+    * 
+    */
+
+    //DOMContentLoaded happens on the document object.
+    //must use addEventListener to catch it:
+    function ready() {
+        alert('DOM is ready');
+        alert(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
+    }
+    document.addEventListener("DOMContentLoaded", ready);
+    //NOTE: image is not yet loaded so the size is 0x0
+
+    /*
+    * NOTE:
+    * External style sheets don’t affect DOM, 
+    * so DOMContentLoaded does not wait for them
+    * If a script after the style,
+    * then that script must wait until the stylesheet loads
+    *  If we have a script after the style, then that script must wait until the stylesheet loads
+    */
+
+    //The load event on the window object triggers 
+    //when the whole page is loaded including styles, images and other resources:
+    window.onload = function () {
+        alert('Page loaded');
+        alert(`Image size: ${img.offsetWidth}x${img.offsetHeight}`);
+    };
+
+    //When user leaves the page, the unload event triggers on window.
+    //the request is sent as post
+    //nabigator.sendBeacon(url,data) sends the data in background
+    // the transition to another page is not delayed the browser leaves the page but still performs sendBeacon
+    let analyticsData = {};
+    window.addEventListener("unload", function () {
+        navigator.sendBeacon("/analytics", JSON.stringify(analyticsData));
+    });
+
+    //window.onbeforeunload
+    //if user initiated navigation away from the page or tries to close the window
+    //the beforeunload handler asks for additiional confirmation
+    window.onbeforeunload = function () {
+        return "There are unsaved changes. Leave now?";
+    };
+
+    //NOTE: if DOMContentLoaded handler is set after the document is loaded 
+    //then it well never runs
+
+    //document.readyState property returns the current loading state.
+    //- loading: the document is loading
+    //- interactive: the document was fully read
+    //- complete: the document was fully read and all resources are loaded too
+    function work() {
+        alert("do work")
+    }
+    if (document.readyState == 'loading') {
+        document.addEventListener('DOMContentLoaded', work);
+    } else {
+        work();
+    }
+</script>
