@@ -96,6 +96,7 @@
     * [Modifying DOM](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/modifying.html)
     * [Styles and Classes](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/style.html)
     * [Load](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/loading.html)
+    * [Scripts: defer/async](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Document/scripts.html)
   * [Event](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event)
     * [Intro to Event](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/intro.html)
     * [Event Delegation](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/delegation.html)
@@ -105,3 +106,4 @@
     * [Form](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/form.html)
     * [Focus/blur](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/focusing.html)
     * [Events: cut, copy, paste](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/events.html)
+    * [Resources Loading](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/resources.html)
