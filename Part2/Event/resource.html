@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    /*
+    * Two events to track the loading of exteral resources
+    * onload: successful load
+    * onerror: an error occurred
+    * 
+    */
+    //ex: if we need to load a third-party script and call a function resides there
+    // thus need to wait until the script loads and only then can call it
+    // script.onload:
+    let script = document.createElement('script');
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"
+    document.head.append(script);
+
+    script.onload = function () {
+        //helper function "_" in the script
+        alert(_);
+    };
+
+    //script.onerror
+    script = document.createElement('script');
+    script.src = "https://example.com/404.js";
+    document.head.append(script);
+
+    script.onerror = function () {
+        alert("Error loading " + this.src);
+    };
+
+    //NOTE: the load and error events also work for other resources 
+    //basically for any resource that has an external src
+</script>
