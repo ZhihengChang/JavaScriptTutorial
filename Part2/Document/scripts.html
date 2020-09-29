@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM</title>
+</head>
+
+<body>
+    <!-- <p>...content before script...</p>
+    <script defer src="https://javascript.info/article/script-async-defer/long.js?speed=1"></script>
+    <p>...content after script...</p> -->
+    
+    <p>...content before scripts...</p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => alert("DOM ready!"));
+    </script>
+
+    <script async src="https://javascript.info/article/script-async-defer/long.js"></script>
+    <script async src="https://javascript.info/article/script-async-defer/small.js"></script>
+
+    <p>...content after scripts...</p>
+</body>
+
+</html>
+
+<script>
+    /*
+    * In modern websites, scripts are often “heavier” than HTML:
+    * their download size is larger, and processing time is also longer.
+    * When the browser loads HTML and comes across a <script> tag
+    * it can’t continue building the DOM.
+    * Scripts can’t see DOM elements below them, so they can’t add handlers etc
+    */
+
+    //defer
+    //the defer attribute tells the browser not to wait for the script
+    //the browser will continue to process the HTML, build DOM
+    //and then runs when the DOM is fully built
+
+    //async
+    //similar to defer
+    //but the broswer doesn't block on async scripts like defer
+    //other scripts don't wait for async scripts and async don't wait for them
+    //DOMContentLoaded and async scripts don’t wait for each other
+    //async load in the background and run when ready
+
+    //dynamic
+    let script = document.createElement('script');
+    script.src = "/article/script-async-defer/long.js";
+    document.body.append(script); 
+    //NOTE: Dynamic scripts behave as async by default
+    //can be changed using script.async = false
+</script>
