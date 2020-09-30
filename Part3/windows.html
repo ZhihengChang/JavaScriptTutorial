@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Additional Articale</title>
+</head>
+
+<body>
+    <input type="button" id="button" value="JS Tutorial">
+</body>
+
+</html>
+
+<script>
+    //A popup window is one of the oldest methods to show additional document to user.
+    window.open('https://javascript.info/');
+    //Most browser will block the popup due to security and user firendly issue 
+    //if they are outside user triggered event like onclick
+    button.onclick = () => {
+        window.open('https://javascript.info');
+    };
+
+    //window.open(url, name, params)
+    //name: A name of the new window.
+    //params: The configuration string for the new window. ex: width=200,height=100
+    let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+                width=0,height=0,left=-1000,top=-1000`;
+    open('/', 'test', params);
+
+    //accessing popup from window
+    //generate content from JS:
+    let blank = window.open("about:blank", "hello", "width=200,height=200");
+    blank.document.write("Hello, world!");
+
+    //modify the content after load:
+    let newWindow = open('/', 'example', 'width=300,height=300')
+    newWindow.focus();
+    alert(newWindow.location.href);
+    newWindow.onload = function () {
+        let html = `<div style="font-size:30px">Welcome!</div>`;
+        newWindow.document.body.insertAdjacentHTML('afterbegin', html);
+    };
+
+    //accessing windows from popup
+    // let newWin = window.open("about:blank", "hello", "width=200,height=200");
+    // newWin.document.write(
+    //     "<script>window.opener.document.body.innerHTML = 'Test'<\/script>"
+    // );
+
+    //to close a popup:
+    blank.close();
+    //NOTE: to check if a pop up is closed:
+    alert(blank.closed);
+
+    //esizing window:
+    //win.moveBy(x,y): Move the window relative to current position x px to the right and y px down. 
+    //                  NOTE: Negative values are allowed (to move left/up)
+    //win.moveTo(x,y): Move the window to coordinates (x,y) on the screen
+    //win.resizeBy(width,height): Resize the window by given width/height relative to the current size. 
+    //                             NOTE: Negative values are allowed.
+    //win.resizeTo(width,height): Resize the window to the given size.
+    //NOTE: there is also a window.onresize event
+
+    //scrolling:
+    //win.scrollBy(x,y): Scroll the window x px right and y down relative the current scroll. Negative values are allowed.
+    //win.scrollTo(x, y): Scroll the window to the given coordinates (x,y).
+    //elem.scrollIntoView(top = true): Scroll the window to make elem show up at the top (the default) 
+    //                                 or at the bottom for elem.scrollIntoView(false).
+    //NOTE: There’s also window.onscroll event.
+</script>
