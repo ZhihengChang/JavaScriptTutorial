@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Additional Articale</title>
+</head>
+
+<body>
+    <iframe src="https://example.com" id="iframe"></iframe>
+    <iframe src="/" id="iframe2"></iframe>
+</body>
+
+</html>
+
+<script>
+    //The “Same Origin” (same site) policy limits access of windows and frames to each other.
+    //this policy protects user from information theft
+    //Two URLs are said to have the “same origin” if they have the same protocol, domain and port
+    //ex: http://site.com/ and http://site.com/my/page.html
+
+    //a reference to another window, a popup created by window.open or a window inside <iframe>, 
+    //and that window comes from the same origin, then full access granted to that window.
+    //otherwise, if it comes from another origin, then we can’t access the content of that window
+    //NOTE: the only exception is location
+    iframe.onload = function () {
+        let iframeWindow = iframe.contentWindow; // OK
+        try {
+            let doc = iframe.contentDocument; // ERROR
+        } catch (e) {
+            alert(e);
+        }
+        //can't READ the URL of the page in iframe
+        try {
+            let href = iframe.contentWindow.location.href; // ERROR
+        } catch (e) {
+            alert(e);
+        }
+        // can WRITE into location
+        iframe.contentWindow.location = '/'; // OK
+        iframe.onload = null;
+    };
+
+    //But if windows share the same second-level domain, for instance john.site.com, peter.site.com 
+    //and site.com (common second-level domain is site.com), 
+    //the defference can be ignored by browser, so that they can be treated 
+    //as coming from the “same origin” for the purposes of cross-window communication.
+    //each window has to run:
+    //document.domain = 'site.com';
+
+    //NOTE: Upon iframe creation an iframe immediately has a document. 
+    //      But that document is different from the one that loads into it
+    let oldDoc = iframe2.contentDocument;
+    iframe2.onload = function () {
+        let newDoc = iframe2.contentDocument;
+        // the loaded document is not the same as initial!
+        alert(oldDoc == newDoc); // false
+    };
+    //fix using setIntervel:
+    /*
+    let timer = setInterval(() => {
+        let newDoc = iframe.contentDocument;
+        if (newDoc == oldDoc) return;
+        alert("New document is here!");
+        clearInterval(timer); // cancel setInterval, don't need it any more
+    }, 100);
+    */
+</script>
