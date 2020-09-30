@@ -107,3 +107,8 @@
     * [Focus/blur](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/focusing.html)
     * [Events: cut, copy, paste](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/events.html)
     * [Resources Loading](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part2/Event/resources.html)
+* Part 3
+  * Additional Articles 
+    * [Popups and Windows](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/windows.html)
+    * [Cross-window Communication](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/cross_window.html)
+    * [Binary Arrays](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/binary.html)
