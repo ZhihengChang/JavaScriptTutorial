@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Additional Articale</title>
+</head>
+
+<body>
+    <!-- <input type="file" onchange="showFile(this)"> -->
+    <input type="file" onchange="readFile(this)">
+
+</body>
+
+</html>
+<script>
+    //A File object inherits from Blob
+    //it extended with filesystem-related capabilities.
+
+    /*
+    new File(fileParts, fileName, [options])
+        fileParts: an array of Blob/BufferSource/String values.
+        fileName: file name string.
+        options (optional):
+           lastModified – the timestamp (integer date) of last modification.
+    */
+
+    //another way is to get file from input
+    function showFile(input) {
+        let file = input.files[0];
+        alert(`File name: ${file.name}`); // e.g my.png
+        alert(`Last modified: ${file.lastModified}`); // e.g 1552830408824
+    }
+
+    //FileReader
+    //reading data from Blob (and File too) objects
+    let reader = new FileReader();
+    //NOTE: no arguments
+    function readFile(input) {
+        let file = input.files[0];
+        let reader = new FileReader();
+        reader.readAsText(file);
+        
+        reader.onload = function () {
+            console.log(reader.result);
+        };
+        reader.onerror = function () {
+            console.log(reader.error);
+        };
+    }
+
+</script>
