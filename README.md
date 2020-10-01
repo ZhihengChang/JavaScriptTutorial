@@ -112,3 +112,7 @@
     * [Popups and Windows](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/windows.html)
     * [Cross-window Communication](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/cross_window.html)
     * [Binary Arrays](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/binary.html)
+    * [TextDecoder and Encoder](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/decoder.js)
+    * [Blob](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/blob.html)
+    * [File and FileReader](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/file.html)
+    * [Fetch](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/fetch.html)
