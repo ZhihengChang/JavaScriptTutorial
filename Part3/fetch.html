@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Additional Articale</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script type="module">
+    //let promise = fectch(url, [options])
+    //without options, that is a simple get request, downloading the contents of the url
+    //the browser starts the request right away and returns a promise
+    (async () => {
+        let url = 'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits';
+        let response = await fetch(url);
+        //let commits = await response.json();
+        let text = await response.text();
+        //alert(commits[0].author.login);
+        //alert(text.slice(0, 80));
+    })();
+
+    //response headers
+    //available in a map like headers object in response.headers
+    // (async () => {
+    //     let response = await fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits');
+    //     alert(response.headers.get('Content-Type'));
+    //     for (let [key, value] of response.headers) {
+    //         alert(`${key} = ${value}`);
+    //     }
+    // })();
+
+    //POST request
+    let user = {
+        name: 'John',
+        surname: 'Smith'
+    };
+    async function createUser(user) {
+        let response = await fetch('/article/fetch/post/user', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(user)
+        });
+        let result = await response.json();
+        alert(result.message);
+    }
+    createUser(user);
+</script>

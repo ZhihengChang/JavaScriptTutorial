@@ -14,7 +14,7 @@
     <div id="error"></div>
 
     Your email please: <input type="email" id="input2">
-    <input type="text" style="width:220px" placeholder="make email invalid and try to focus here">
+    
 </body>
 
 </html>
@@ -50,4 +50,11 @@
             this.classList.remove('invalid');
         }
     }
+    
+    //NOTE: not all element support focus/blur. 
+    //support is guaranteed for elements that a visitor can interact with:
+    //button, input, select, a, etc
+    //for the rest, can be changed using HTML-attribute tabindex
+    //any element becomes focusable if it has tabindex.
+    
 </script>
