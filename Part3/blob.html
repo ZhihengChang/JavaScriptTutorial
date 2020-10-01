@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Additional Articale</title>
+</head>
+
+<body>
+    <a download="hello.txt" href='#' id="download">Download</a>
+    <img src="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg">
+</body>
+
+</html>
+<script>
+    /*
+    Blob means Binary Large Object
+    they are used for the underlying data structure for File used in the FileReader API
+    Blob consists of an optional string type and blobParts
+    
+    new Blob(blobParts, options);
+    blobParts: an array of Blob/BufferSource/String values
+    options (optional):
+        type – Blob type, usually MIME-type, e.g. image/png,
+        endings – whether to transform end-of-line to make the Blob correspond to current OS newlines (\r\n or \n). 
+        By default "transparent" (do nothing), but also can be "native" (transform).
+    */
+    let blob = new Blob(["<html>…</html>"], { type: 'text/html' });
+
+    let hello = new Uint8Array([72, 101, 108, 108, 111]); // hello in binary
+    blob = new Blob([hello, ' ', 'world'], { type: 'text/plain' });
+
+    /*
+    extract from blob:
+    blob.slice([byteStart], [byteEnd], [contentType]);
+    byteStart: by default is 0, the starting byte
+    byteEnd: the last byte
+    contentType: the type of the new blob, by default the same as the source.
+    
+    NOTE: Blob objects are immutable
+    */
+    //A Blob can be used as an URL for <a>, <img> or other tags to show its contents.
+    blob = new Blob(["Hello, world!"], { type: 'text/plain' });
+    download.href = URL.createObjectURL(blob);
+
+    //Image to blog via canvas
+    let img = document.querySelector('img');
+    let canvas = document.createElement('canvas');
+    canvas.width = img.clientWidth;
+    canvas.height = img.clientHeight;
+    let context = canvas.getContext('2d');
+    context.drawImage(img, 0, 0);
+    canvas.toBlob(function (blob) {
+        let link = document.createElement('a');
+        link.download = 'example.png';
+        link.href = URL.createObjectURL(blob);
+        link.click();
+        URL.revokeObjectURL(link.href);
+    }, 'image/png');
+</script>
