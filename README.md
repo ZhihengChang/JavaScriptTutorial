@@ -116,3 +116,4 @@
     * [Blob](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/blob.html)
     * [File and FileReader](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/file.html)
     * [Fetch](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/fetch.html)
+    * [FormData Object](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/formData.html)
