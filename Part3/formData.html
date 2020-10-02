@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Additional Articale</title>
+</head>
+
+<body>
+    <form id="formElem">
+        <input type="text" name="name" value="John">
+        <input type="text" name="surname" value="Smith">
+        Picture: <input type="file" name="picture" accept="image/*">
+        <input type="submit">
+    </form>
+</body>
+
+</html>
+<script>
+    //formData Object
+    formElem.onsubmit = async (e) => {
+        e.preventDefault();
+        let formData = new FormData(formElem);
+        for(let[key, value] of formData){
+            alert(`${key} = ${value}`);
+        }
+
+        let response = await fetch('/article/formdata/post/user', {
+            method: 'POST',
+            body: new FormData(formElem)
+        });
+        let result = await response.json();
+        alert(result.message);
+    }
+
+    //NOTE: the form is always sent as content-type: multipart/form-data
+    //      sending file is allowed
+</script>

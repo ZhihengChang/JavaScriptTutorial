@@ -24,15 +24,15 @@
         //alert(text.slice(0, 80));
     })();
 
-    //response headers
-    //available in a map like headers object in response.headers
-    // (async () => {
-    //     let response = await fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits');
-    //     alert(response.headers.get('Content-Type'));
-    //     for (let [key, value] of response.headers) {
-    //         alert(`${key} = ${value}`);
-    //     }
-    // })();
+    response headers
+    available in a map like headers object in response.headers
+    (async () => {
+        let response = await fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits');
+        alert(response.headers.get('Content-Type'));
+        for (let [key, value] of response.headers) {
+            alert(`${key} = ${value}`);
+        }
+    })();
 
     //POST request
     let user = {
