@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Additional Articale</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    /*
+    * fetch() returns a promise
+    * JS generally has no concept of aborting a promise
+    * in order to cancel an ongoing fetch use AbortController
+    * it can be used to abort other async tasks as well
+    */
+    let controller = new AbortController();
+    //has single method abort();
+    //single property signal that allows to set event liseners on it
+    //when abort() is called controller.signal emits the "abort" event
+    //the controller.signal.aborted property becomes true
+    let signal = controller.signal;
+    signal.addEventListener('abort', () => alert("abort!"));
+    controller.abort();
+    controller.abort();
+    //pass abort events when abort() is called on it
+
+    //using with fetch:
+    let controller = new AbortController();
+    setTimeout(() => controller.abort(), 1000);
+
+    try {
+        let response = await fetch('/article/fetch-abort/demo/hang', {
+            signal: controller.signal
+        });
+    } catch (err) {
+        if (err.name == 'AbortError') {
+            alert("Aborted!");
+        } else {
+            throw err;
+        }
+    }
+    //NOTE: AbortController is scalable it allows to cancel multiple fetches at once
+    
+</script>
