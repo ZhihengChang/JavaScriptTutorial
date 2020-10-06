@@ -118,3 +118,5 @@
     * [Fetch](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/fetch.html)
     * [FormData Object](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/formData.html)
     * [Fetch: Download Progress](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/download.html)
+    * [Fetch: Abort](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/abort.html)
+    * [Fetch: cross-origin](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/corss_fetch.html)
