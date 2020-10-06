@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Additional Articale</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    /*
+    * if fetch from another web-site, it will probably fail
+    * origin - domain/port/protocol triplet
+    * cross-origin requests:
+    * those sent to another domain even a subdomain or protocol
+    * or port-require special headers from the remote side
+    * 
+    * one way to communicate with another server was to submit a form
+    * another way is to use a script tag
+    * a script can have any src with any domain
+    */
+    function gotWeather({ temperature, humidity }) {
+        alert(`temperature: ${temperature}, humidity: ${humidity}`);
+    }
+    //set callback = gotWeather
+    let script = document.createElement('script');
+    script.src = `http://another.com/weather.json?callback=gotWeather`;
+    document.body.append(script);
+    //the above is old way to get data from another website
+
+    //Now there are two types of cross-origin requests
+    //simple request: a request that satisfies two conditions:
+    //simple method: get post or head
+    //simple headers: accept, accept-language, content-language, 
+    //content-type with value application/x-www-form-urlencoded, multipart.form-data, or text/plain
+
+    
+
+</script>
