@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Main Page</title>
+</head>
+
+<body>
+    <form id="fileUpload"></form>
+        <input type="file"/>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
+
+<script>
+    fileUpload.onsubmit = async (event) => {
+        event.preventDefault();
+        let response = await fetch('http://localhost:3002/fileupload', {
+            method: 'POST',
+            body: new FormData(fileUpload)
+        });
+        alert(response);
+        //alert(result.message);
+    }
+</script>
