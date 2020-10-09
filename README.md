@@ -120,3 +120,5 @@
     * [Fetch: Download Progress](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/download.html)
     * [Fetch: Abort](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/abort.html)
     * [Fetch: cross-origin](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/corss_fetch.html)
+    * [URL Object](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/url.html)
+    * [XMLHttpRequest](https://github.com/ZhihengChang/JavaScriptTutorial/tree/master/Part3/xmlHttpRequest.html)
