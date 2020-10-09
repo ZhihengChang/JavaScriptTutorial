@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Additional Articale</title>
+</head>
+
+<body>
+    
+</body>
+
+</html>
+<script>
+    //create a URL object:
+    let url = new URL('https://javascript.info/profile/admin')
+    //or in (url, [base]): 
+    let url2 = new URL('/profile/admin', 'https://javascript.info');
+    //url and url2 are the same
+    //The URL object immediately allows us to access its components:
+    alert(url.protocol);
+    alert(url.host);
+    alert(url.pathname);
+    
+    /**
+     * protocal: https:
+     * hostname: site.com
+     * port: ex: 8080
+     * pathname: /path/page
+     * search query: p1=v1 etc.
+     * hash: #hash
+    */
+
+   //to handle search param use URLSearchParams
+   //methods: append, delete, get etc.
+   url = new URL('https://google.com/search')
+   url.searchParams.set('q', 'test me!');
+   alert(url);
+
+   //NOTE: there is a standard RFC3986 that defines which characters are allowed in URLs
+   //ex: non-latin letters and spaces are replaced with their URF-8 code: %20 
+   //however, URL objects handle all automatically:
+   let test = new URL('https://ru.wikipedia.org/wiki/Тест')
+   url.searchParams.set('key', 'ъ');
+   alert(url);
+</script>
