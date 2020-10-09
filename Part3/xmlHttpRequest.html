@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Additional Articale</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    /**
+     * XMLHttpRequest is a built-in browser object 
+     * that allows to make HTTP requests in JS 
+     * fetch deprecates XMLHttpRequest
+     * three reason to use XMLHttpRequest:
+     *  - support existing scripts with XMLHttpRequest
+     *  - support old browsers and dont want polyfills 
+     *  - something fetch can't do yet ex: to track upload progress
+     */
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', '/article/xmlhttprequest/example/load');
+    xhr.send();
+
+    /**
+     * xhr properties:
+     * status: status code 200, 404, 403. 500 etc
+     * statusText: status message "OK", "Not Found" etc
+     * response: the server response body
+     * NOTE: ther is also a timeout property: xhr.timeout = 10000; 
+     */
+
+    //after the response is received:
+    xhr.onload = function () {
+        if (xhr.status != 200) {
+            alert(`Error ${xhr.status}: ${xhr.statusText}`);
+        } else { // show the result
+            alert(`Done, got ${xhr.response.length} bytes`);
+        }
+    };
+
+    xhr.onprogress = function (event) {
+        if (event.lengthComputable) {
+            alert(`Received ${event.loaded} of ${event.total} bytes`);
+        } else {
+            alert(`Received ${event.loaded} bytes`);
+        }
+
+    };
+
+    xhr.onerror = function () {
+        alert("Request failed");
+    };
+
+    /**
+     * response type
+     * "" default: get as string
+     * "text": get as string
+     * "arraybuffer": get as ArrayBuffer (for binary data)
+     * "blob": get as Blob
+     * "document": get as SML document
+     * "json": get as JSON 
+     */
+    xhr = new XMLHttpRequest();
+    xhr.open('GET', '/article/xmlhttprequest/example/json');
+    xhr.responseType = "json"
+    xhr.send();
+
+    xhr.onload = function () {
+        let responseObj = xhr.response;
+        alert(responseObj.message);
+    };
+
+    /**
+     * XMLHttpRequest changes between states as it progresses
+     * The current state is accessible as xhr.readyState
+     * UNSENT = 0 initial
+     * OPENED = 1 open called
+     * HEADERS_RECEIVED = 2 response headers received
+     * LOADING = 3 response is loading
+     * DONE = 4 request complete
+     */
+    xhr.onreadystatechange = function() {}
+</script>
