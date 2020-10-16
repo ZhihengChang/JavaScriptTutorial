@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Main Page</title>
+</head>
+
+<body>
+    <img src="" id="testImg"/>
+    <input type="file" name="txtFile" id="inputElem"/>
+    <input type="button" value="Submit" onclick="submit()">
+</body>
+
+</html>
+
+<script>
+    
+    let base64String;
+    inputElem.onchange = async function(event){
+        //let file = inputElem.files[0];
+        //alert(URL.createObjectURL(file));
+        //testImg.src = URL.createObjectURL(file);
+    }
+    
+    async function submit(){
+        console.log("fetching")
+        let file = inputElem.files[0];
+        // let formData = new FormData();
+        // formData.append("txtFile", "a txt file");
+        let response = await fetch('/fileupload', await getRequest(file));
+    }
+
+    async function toDataURL(file){
+        let reader = new FileReader();
+        reader.readAsDataURL(file);
+        return new Promise(resolve => {
+            reader.onloadend = () =>{
+                //console.log("test: ", reader.result);
+                resolve(reader.result);
+            };
+        });
+    }
+
+    async function getRequest(file){
+        return toDataURL(file)
+        .then(result => {
+            return {
+                method: 'POST',
+                body: result
+            };
+        });
+    }
+</script>

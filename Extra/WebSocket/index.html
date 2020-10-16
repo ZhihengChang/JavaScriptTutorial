@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WebSocket</title>
+</head>
+
+<body>
+    <form name="publish">
+        <input type="text" name="message">
+        <input type="submit" value="Send">
+    </form>
+
+    <div id="messages"></div>
+</body>
+
+</html>
+
+<script>
+    let ws = new WebSocket("ws://localhost:5000");
+    // let socket;
+    // let btn = document.querySelector("input");
+    // function openSocket() {
+    //     return new Promise(function (resolve, reject) {
+    //         let ws = new WebSocket("ws://localhost:5000");
+    //         ws.onopen = function () {
+    //             console.log("[open] Connection Established")
+    //             resolve(ws);
+    //         };
+    //         ws.onerror = function (err) {
+    //             reject(err);
+    //         };
+    //     });
+    // }
+    // function connectServer() {
+    //     openSocket().then(function (ws) {
+    //         ws.send("Hello");
+    //         ws.onmessage = function (event) {
+    //             alert(`[message] Data received from server: ${event.data}`);
+    //         }
+
+    //     }).catch(function (err) {
+    //         console.log(err);
+    //     });
+    // }
+    // btn.addEventListener("click", connectServer);
+
+    document.forms.publish.onsubmit = function(){
+        let msg = this.message.value;
+        ws.send(msg);
+        return false;
+    }
+
+    ws.onmessage = function(e){
+        let msg = e.data;
+        let msgElem = document.createElement('div');
+        msgElem.textContent = msg;
+        document.getElementById('messages').prepend(msgElem);
+    }
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button onclick="start()">Start</button>
+    <div id="logElem" style="margin: 6px 0"></div>
+    <button onclick="stop()">Stop</button>
+</body>
+
+</html>
+<script>
+    let eventSource;
+    function start() {
+        eventSource = new EventSource('digits');
+        
+        eventSource.onopen = function (e) {
+            log("Event: open");
+        };
+
+        eventSource.onerror = function (e) {
+            log("Event: error");
+            if (this.readyState == EventSource.CONNECTING) {
+                log(`Reconnecting (readyState=${this.readyState})...`);
+            } else {
+                log("Error has occured.");
+            }
+        };
+
+        eventSource.addEventListener('bye', function (e) {
+            log("Event: bye, data: " + e.data);
+        });
+
+        eventSource.onmessage = function (e) {
+            log("Event: message, data: " + e.data);
+        };
+    }
+
+    function stop() {
+        eventSource.close();
+        log("eventSource.close()");
+    }
+
+    function log(msg) {
+        logElem.innerHTML += msg + "<br>";
+    }
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Main Page</title>
+</head>
+
+<body>
+    <form id="formElement">
+        Name: <input type="text" name="name"/>
+        Email: <input type="text" name="email"/>
+        Address: <input type="text" name="address"/>
+        <input type="button" value="Submit" onclick="submit()">
+    </form>
+</body>
+
+</html>
+<script>
+    var xhr = new XMLHttpRequest();
+    var url = 'localhost:3000';
+    var submitForm = document.getElementById('formElement');
+    
+    xhr.onload = function(){
+        alert(xhr.responseText);
+    }
+    
+    xhr.onerror = function(){
+        alert(xhr.responseText);
+    }
+    
+    function sumbit(){
+        xhr.open('POST', "/submit");
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.send(new FormData(submitForm))
+        return false;
+    }
+
+</script>
